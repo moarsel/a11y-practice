@@ -23,7 +23,7 @@
         }
 
         #light-switch:checked~#background {
-            background-color: #ebdbac;
+            background-color: #f6cd4f;
             z-index: -1;
         }
 
@@ -148,23 +148,27 @@
             left: 0;
             background-color: #132436;
         }
+
+        .pale-yellow {
+            color: #f6cd4f;
+        }
     </style>
 
 </head>
 
 <body class="avenir pa4 black-80 avenir mr-auto ml-auto mw7">
-    <p aria-hidden="true" class="relative white z-1">Press Command + F5 to turn on VoiceOver</p>
-    <p aria-hidden="true" class="relative white z-1">Press Control + Option + Shift + Down Arrow to Enter Page</p>
-    <h1>Welcome to the scavenger hunt</h1>
+    <p aria-hidden="true" class="relative pale-yellow z-1">Press Command + F5 to turn on VoiceOver</p>
+    <p aria-hidden="true" class="relative pale-yellow z-1">Press Control + Option + Shift + Down Arrow to Enter Page</p>
+    <h1 class="relative pale-yellow z-1">Welcome to the Scavenger Hunt</h1>
     <main id="maincontent">
-        <h2>Your mission is to find the key and turn on the lights in here</h2>
+        <h2>Your mission is to turn on the lights in here...</h2>
         <div class="house">
             <p>You are now inside the house.</p>
-            <div class="front-hall">
-                <h3>You're standing by the light switch</h3>
+            <div class="ba bw1 b--gray pa3 pb5 ma4" class="front-hall">
+                <h3>You're standing by the light switch.</h3>
                 <input type="checkbox" id="light-switch" aria-describedby="explanation" disabled/>
                 <!-- switch from https://codepen.io/designcouch/pen/dCBJr -->
-                <label for="light-switch" id="light-switch-label">
+                <label aria-hidden="true" for="light-switch" id="light-switch-label">
                     <div class="screw"></div>
                     <div class="switch"></div>
                     <div class="screw"></div>
@@ -172,24 +176,24 @@
                 <div id="background"></div>
                 <p id="explanation" hidden>The light switch isn't working, please turn on the power generator.</p>
             </div>
-            <div>
+            <div class="ba bw1 b--gray pa3 pb5 ma4">
                 <h3>You're in the living room</h3>
                 <button class="input-reset">Sit on the couch</button>
                 <button class="input-reset">Stare out the window</button>
                 <button class="input-reset">Pet the dog</button>
             </div>
-            <div id="main">
+            <div class="ba bw1 b--gray pa3 pb5 ma4" id="main">
                 <h3>You are beside the basement stairs</h3>
                 <a href="#basement">Go down the basement stairs</a>
             </div>
-            <div>
+            <div class="ba bw1 b--gray pa3 pb5 ma4">
                 <h3>You are now in the kitchen</h3>
                 <button class="input-reset">Turn on the faucet</button>
                 <button class="input-reset">Preheat the oven</button>
                 <button class="input-reset">Open the cupboard</button>
             </div>
-            <div id="basement">
-                <h3>You're now in the basement</h3>
+            <div id="basement" class="mt5 pa3 ba bw1 b--gray">
+  pb5               <h3>You're now in the basement</h3>
                 <p>You can see:</p>
                 <ul>
                     <li>Some dusty cobwebs</li>
@@ -198,7 +202,7 @@
                     <li>A chainsaw</li>
                     <li>The generator!</li>
                 </ul>
-                <a href="#main">Run back up stairs?</a>
+                <a class="mt4 mb4" href="#main">Run back up stairs?</a>
                 <fieldset>
                     <legend>Power Generator</legend>
                     <div class="flex items-center mb2">
@@ -213,11 +217,19 @@
                 <p>You're in the back corner of the basement... Nothing to see here.</p>
             </div>
         </div>
+        <div id="click-grabber" class="top-0 bottom-0 right-0 left-0 fixed z-3"></div>
     </main>
     <script>
         (() => {
-            const lightswitch = document.getElementById('light-switch');
+            document.getElementById('click-grabber')
+                .addEventListener('click', (ev) => {
+                    ev.stopPropagation();
+                    ev.preventDefault();
+                    ev.stopImmediatePropagation();
+                    return false;
+                });
 
+            const lightswitch = document.getElementById('light-switch');
             const generator = document.getElementById('generator');
             generator.addEventListener('change', (ev) => {
                 if (ev.target.value === 'on') {

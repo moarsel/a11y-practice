@@ -125,15 +125,17 @@
             Cancel!
         </button>
     </dialog>
+    <div id="click-grabber" class="top-0 bottom-0 right-0 left-0 fixed z-3"></div>
+
     <script>
         (function () {
-            document.addEventListener('click', (ev) => {
-                if (ev.screenX !== 0) { // not a keyboard press
-                    alert('No clicking, cheater!');
+            document.getElementById('click-grabber')
+                .addEventListener('click', (ev) => {
+                    ev.stopPropagation();
                     ev.preventDefault();
+                    ev.stopImmediatePropagation();
                     return false;
-                }
-            });
+                });
             const form = document.getElementById('mainForm');
             form.addEventListener('submit', (ev) => {
                 console.log(ev)
