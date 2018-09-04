@@ -1,0 +1,27 @@
+{
+  "name": "a11y-practice",
+  "version": "1.0.0",
+  "description": "understanding your full range of users by trying on their shoes",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "pdf": "mdx-deck pdf deck.mdx",
+    "image": "mdx-deck screenshot deck.mdx",
+    "help": "mdx-deck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moarsel/a11y-practice.git"
+  },
+  "author": "Russell Hoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moarsel/a11y-practice/issues"
+  },
+  "homepage": "https://github.com/moarsel/a11y-practice#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mdx-deck": "^1.6.9"
+  }
+}

@@ -104,7 +104,7 @@
                     <label for="terms" class="lh-copy">I would like to get the weekly newsletter for movie updates!</label>
                 </div>
                 <div class="flex items-center mb2">
-                    <input class="mr2" type="checkbox" id="newsletter" value="newsletter">
+                    <input class="mr2" type="checkbox" id="newsletter" value="newsletter" checked>
                     <label for="newsletter" class="lh-copy">I hereby agree to the
                         <a href="javascript:;" id="open-terms" class="input-reset">terms and conditions</a>
                     </label>
@@ -138,7 +138,9 @@
                 });
             const form = document.getElementById('mainForm');
             form.addEventListener('submit', (ev) => {
-                console.log(ev)
+                if (document.getElementById('newsletter').checked === true) {
+                    alert('Oops! You sold your soul! Always read the terms and conditions.')
+                }
                 ev.preventDefault();
                 return false;
             });
