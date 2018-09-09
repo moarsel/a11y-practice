@@ -93,7 +93,7 @@
         left: 75%;
     }
 
-    input:checked+label {
+    input:checked+.label-wrapper {
         cursor: default;
         color: #fff;
     }
@@ -195,7 +195,9 @@
                             <img src="http://mrmrs.github.io/photos/cpu.jpg" class="db" alt="Photo of a dimly lit room with a computer interface terminal.">
                         </div>
                         <div class="w-100 pl3-ns">
-                            <h1 class="f3 fw6 avenir mt0 lh-title">Tech Giant Invests Huge Money to Build a Computer Out of Science Fiction</h1>
+                            <h1 class="f3 fw6 avenir mt0 lh-title">Tech Giant Invests Huge Money to Build a Computer
+                                Out
+                                of Science Fiction</h1>
                             <p class="f6 lh-copy mv0">By Robin Darnell</p>
                         </div>
                     </div>
@@ -221,7 +223,9 @@
                             <img src="http://mrmrs.github.io/photos/whale.jpg" class="db" alt="Photo of a whale's tale coming crashing out of the water.">
                         </div>
                         <div class="w-100 pl3-ns">
-                            <h1 class="f3 fw6 avenir mt0 lh-title">Giant Whale Invests Huge Money to Build a Computer Out of Plankton</h1>
+                            <h1 class="f3 fw6 avenir mt0 lh-title">Giant Whale Invests Huge Money to Build a Computer
+                                Out
+                                of Plankton</h1>
                             <p class="f6 lh-copy mv0">By Robin Darnell</p>
                         </div>
                     </div>
@@ -233,42 +237,46 @@
                 <h2 class="avenir fw6 ph3 ph0-l">Sign up now!</h2>
                 <div class="mt4 flex flex-row-reverse">
                     <div>
-                        <label class="db fw4 lh-copy f6" for="first-name">First name</label>
-                        <input class="pa2 input-reset ba bg-transparent w-100" type="input" name="first-name" id="first-name" required>
+                        <label class="db fw4 lh-copy f6" for="first-name">Last name</label>
+                        <input class="pa2 input-reset ba bg-transparent w-100" type="input" name="first-name" id="first-name"
+                            required>
                     </div>
                     <div>
                         <label class="db fw4 lh-copy f6" for="middle">Middle name</label>
-                        <input class="b pa2 input-reset ba bg-transparent" type="input" name="middle" id="middle" required minlength="9">
+                        <input class="b pa2 input-reset ba bg-transparent" type="input" name="middle" id="middle"
+                            required minlength="9">
                     </div>
                     <div>
-                        <label class="db fw4 lh-copy f6" for="last-name">Last name</label>
-                        <input class="b pa2 input-reset ba bg-transparent" type="input" name="last-name" id="last-name" required minlength="9">
+                        <label class="db fw4 lh-copy f6" for="last-name">First name</label>
+                        <input class="b pa2 input-reset ba bg-transparent" type="input" name="last-name" id="last-name"
+                            required minlength="9">
                     </div>
                 </div>
                 <div class="mt4">
-                <label>How many months do you want to sign up for?</label>
-                <div class="wrapper db">
-                    <div class="label-wrapper">
-                        <input id="one" type="radio" name="group-1" />
-                        <label class="lbl" for="one">One</label>
-                        <input id="two" type="radio" name="group-1" />
-                        <label class="lbl" for="two">Two</label>
-                        <input id="three" type="radio" name="group-1" />
-                        <label class="lbl" for="three">Three</label>
-                        <input id="four" type="radio" name="group-1" />
-                        <label class="lbl" for="four">Four</label>
-                        <div class="slider"></div>
+                    <label>How many months do you want to sign up for?</label>
+                    <div class="wrapper db">
+                        <div class="label-wrapper">
+                            <input id="one" type="radio" name="group-1" />
+                            <label class="lbl" for="one">One</label>
+                            <input id="two" type="radio" name="group-1" />
+                            <label class="lbl" for="two">Two</label>
+                            <input id="three" type="radio" name="group-1" />
+                            <label class="lbl" for="three">Three</label>
+                            <input id="four" type="radio" name="group-1" />
+                            <label class="lbl" for="four">Four</label>
+                            <div class="slider"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
                 <div class="mt4">
                     <label class="db fw4 lh-copy f6" for="email-address">Email address</label>
-                    <input class="pa2 input-reset ba bg-transparent w-100" type="email" name="email-address" id="email-address" required>
+                    <input class="pa2 input-reset ba bg-transparent w-100" type="email" name="email-address" id="email-address"
+                        required>
                 </div>
                 <div class="mt4">
                     <label class="db fw4 lh-copy f6" for="password">Password</label>
-                    <input class="b pa2 input-reset ba bg-transparent outline-none" type="password" name="password" id="password" aria-describedby="password-desc"
-                        required minlength="9">
+                    <input class="b pa2 input-reset ba bg-transparent outline-none" type="password" name="password" id="password"
+                        aria-describedby="password-desc" required minlength="9">
                 </div>
                 <div class="mt4 flex items-center mb2">
                     <input class="mr2" type="checkbox" id="newsletter" value="newsletter">
@@ -286,9 +294,11 @@
         <div class="mw7 ba bw1  pa4 bg-white center">
             <h1>Terms and conditions</h1>
             <p>
-                I hereby agree to give all of my belongings (and my soul) to the business corp and waive all my rights to counsel.
+                I hereby agree to give all of my belongings (and my soul) to the business corp and waive all my rights
+                to counsel.
             </p>
-            <input type="submit" id="confirm" class="b ph4 mh3 pv3 input-reset ba b--black bg-transparent pointer f6" value="Sounds good!">
+            <input type="submit" id="confirm" class="b ph4 mh3 pv3 input-reset ba b--black bg-transparent pointer f6"
+                value="Sounds good!">
             <button id="cancel" class="b ph4 pv3 input-reset ba b--black bg-transparent pointer f6">
                 Cancel!
             </button>
