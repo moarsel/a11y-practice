@@ -14,4 +14,5 @@ Run `npm start` to run the local server and show the deck,
 
 ## Publishing
 
-Will use `now` for publishing.
+Uses `now` for hosting static site. To build, deploy and alias, run:
+`npm run deploy`

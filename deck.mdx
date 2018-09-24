@@ -1,62 +1,74 @@
 import { Invert } from 'mdx-deck/layouts'
 import { Image, Notes, Appear, Split } from 'mdx-deck'
 
+export theme from './theme.js'
+
 # Don’t Break the Internet❗️
-## Immersive Web Accessibility
-
----
-# What is disability?
+#### Immersive web accessibility
+<a href="/exercises/">Go to Exercises</a>
 ```notes
-What is it about blindness or wheelchair use that qualifies it as a disability? It's easy to see it as an attribute of that person, but it's also how we've built our society. Our physical infrastructure, our services, our products, etc. 
+Thank you for coming today! A11y can seem like a dry topic with lots of regulations to follow. 
+Those details aren't as important as what we're going to learn about today:
+- the full range of users on the web
+- understand how they use the internet, and hands on practice
+- a framework for catching accessibility errors in your day to day work
 ```
+---
+## What is a disability?
+<Image src='./images/Disability-Models.svg' size="100%" height="80vh"/>
 
 ```notes
-Rich Donovan - GTA > York > Columbia 
-    > Wall street trader w merril lynch 
-    > sells CEOs on the ROI of disability focus (pepsico, TD). 
-    > Outperforms S&P by 2.8% and the tsx by 4%
-    > 1.3 billion - 18.7 % of Canada.
-High school elevator changed his perspective - walking straight isn't that important compared to the huge range of human abilities (math). when you can use a scooter (jealous?)
-Eventually made RoD - people don't want custom made pepsi for disability they want easier to open bottles. Similarly they dont' want 
-
-SIDE NOTE: For those curious about ettiquette explain person first language.
-
+What is a disability? It's actually a tricky question. History lesson: medical vs social model.
+Medical: disability is an impairment of an individual. Solution is compassion or pity.
+Social: variations among people may be impairments, but disability primarily happens in social context because of:
+- systemic barriers
+- negative attitudes
+- exclusion (purposely or inadvertently) 
 
 ```
 ---
 <Image src='./images/inaccessible-curb.jpeg'/>
 
 ```notes
-If everybody was in a wheelchair, imagine how different our society would look. Everything would be designed for wheel access and it wouldn't be considered a disability. (Similar to how easy access to optometry prevents us glasses users from being considered disabled.)
+Because most people can step onto curbs, we made sidewalks wrong for decades.
+We built a product for the public that excluded a minority of users with different abilities.
+The result was a worse experience for everyone. (Tyler in Japan)
 ```
 ---
 <Image src='./images/accessible-curb.jpg'/>
 
 ```notes
-Who else does a steep curb create a barrier for? Visually impaired, people using walkers or with mobility issues, pregnant women, parents with strollers, cyclists, movers, etc. 
+Curbs designed for all users are not only more inclusive, but better for everyone. 
+People on powered scooters now have the technology and available design to potentially have better than average ability to navigate an accessible city.
+A study showed that 9/10 pedestrians would go out of their way to use a curb cut.
 ```
 ---
-<Image src='./images/disability-model.png' size="110vh"/>
----
-## Disability = Ability 🏋️‍ × Barrier 🚧
+## Disability = Abilities 🏋️‍ × Barriers 🚧
+```notes
+Disability can only be fully understood in the context of each individual's abilities (or impairments) and environment.
+It is caused by a mismatch between their capabilities and barriers in their environment.
 
+As web developers we want to build an environment that a) minimizes barriers, b) improves capabilities.
+```
 ---
 ## Ok, but we're not building sidewalks...
 
 ```notes
-The first time we built our roads (and schools, transit, etc.) we didn't account for all our users. The web is the infrastructure of the future and we can avoid making that mistake again.
+The first time we built our roads (and schools, transit, etc.) we didn't account for all our users. 
+The web is the infrastructure of the future and we can avoid making that mistake again.
+Question: What capabilities does your current work give people, and how could barriers affect them?
 ```
 ---
 
 > The power of the Web is in its universality.
 > Access by everyone regardless of disability is an essential aspect.
 
- -Tim Berners-Lee, W3C Director and inventor of the World Wide Web
+ -Tim Berners-Lee, W3C Director and inventor of the World Wide Web, 1997
 
 ---
+### What impairments might our users have?
 
-
-| Barriers 	    | Permanent 	| Temporary 	| Situational 	|
+| Impairment    | Permanent 	| Temporary 	| Situational 	|
 |-----------	|-----------	|-----------	|-------------	|
 | Vision    	|           	|           	|             	|
 | Hearing   	|           	|           	|             	|
@@ -65,7 +77,19 @@ The first time we built our roads (and schools, transit, etc.) we didn't account
 
 ```notes
 Exercise:
-Who is affected by permanent, temporary, and situational scenarios to people with vision, hearing, mobility, or cognitive barriers?
+Abilities come in a wide spectrum (think Stephen Hawking)
+ - cognitive, vision, speech, hearing, mobility
+ - temporary, permanent, situational
+
+Make 4 groups and think of the types of impairments for each category.
+```
+---
+
+### Assistive technology
+
+```notes
+Gives new set of capabilities to users.
+The huge range of hardware and software tech matches the huge diversity of abilities in people.
 ```
 ---
 <iframe style={{height: "90vh", width:"100vw" }} width="560" height="315" src="https://www.youtube.com/embed/XB4cjbYywqg" frameBorder="0" allow="autoplay; encrypted-media"></iframe>
@@ -73,9 +97,12 @@ Who is affected by permanent, temporary, and situational scenarios to people wit
 <iframe style={{height: "90vh", width:"100vw" }} width="560" height="315" src="https://www.youtube.com/embed/nXBsDrCb54g" frameBorder="0" allow="autoplay; encrypted-media"></iframe>
 ---
 Switch Devices
-<iframe style={{height: "90vh", width:"100vw" }}src="https://bltt.org/hardware/switches.htm" width="100%" height="500px">
+<iframe style={{height: "90vh", width:"100vw" }} src="https://bltt.org/hardware/switches.htm" width="100%" height="500px">
 </iframe>
 
+```notes
+Demo switch on mac if there is time.
+```
 ---
 ## 🙀 Seems impossible?
 # Don't panic!
@@ -87,18 +114,22 @@ Luckily the web was designed to make this easier, and you’ve already learned t
 *Robust*: across different assistive technology.
 ```
 ---
+<Image src='./images/interaction-model.png'/>
 
-| Users 	    | Perceivable? 	| Understandable?| Operable? 	|
-|-----------	|-----------	|--------------- |-------------	|
-| Vision    	|           	|           	 |             	|
-| Hearing   	|           	|           	 |             	|
-| Mobility  	|           	|           	 |             	|
-| Cognitive 	|           	|           	 |             	|
+```notes
+What does it mean, practically for a user to not have any barriers to our web apps?
+It's helpful to break it down:
+They can perceive it (see, hear, touch).
+They can understand it (content is simple, grouped into meaningful sections, what actions are available)
+They can operate it (use it).
 
+```
+---
+<Image src='./images/multimodal.png'/>
 ---
 # ⌨️ Keyboard navigation
-* used across a very wide range devices (e.g. switches, mobile devices)
-* used by a range of users (vision, mobility, cognitive, power users)
+* Used across a very wide range devices (e.g. switches, mobile devices)
+* Used by a range of users (vision, mobility, cognitive, power users)
 
 ```notes
 Raise your hand if you know the answer:
@@ -116,14 +147,15 @@ How to click a link (enter)
 ## Keyboard cheat sheet
 
 * <kbd>Tab</kbd> - Navigate every interactive element
-* <kbd>Shift</kbd>+<kbd>Tab</kbd> - Navigate every interactive element
-* <kbd>Space</kbd> - activate form controls
-* <kbd>Enter</kbd> - visit link or submit form
-* <kbd>Escape</kbd> - close the modal window
+* <kbd>Shift</kbd>+<kbd>Tab</kbd> - Navigate reverse direction
+* <kbd>Space</kbd> - Activate form controls
+* <kbd>←</kbd> / <kbd>→</kbd> - Move within form control
+* <kbd>Enter</kbd> - Visit link or submit form
+* <kbd>Escape</kbd> - Close open modal, popover, dropdown
 
 ```notes
-- Movie night signup demo
 - News website demo
+- Movie night signup demo
 - Catch errors on business sales website
 
 ```
@@ -160,18 +192,14 @@ Demo: show where accessibility settings are, slow down rate, and then turn on.
 ---
 
 # Voiceover Cheat sheet
-* <kbd>Command</kbd> + <kbd>F5</kbd> - Turn on Voiceover
-* <kbd>Control</kbd> + <kbd>Option</kbd> - <kbd>VO</kbd> The Voiceover Key
-* <kbd>VO</kbd> + <kbd>←</kbd> / <kbd>→</kbd> - Navigate items
-* <kbd>VO</kbd> + <kbd>Space</kbd> - "Click" the active item
-
-Advanced:
-* <kbd>VO</kbd> + <kbd>U</kbd> - Open the rotary menu
-* <kbd>VO</kbd> + <kbd>←</kbd> / <kbd>→</kbd> - Switch rotary menus
+* <kbd>Command</kbd> + <kbd>F5</kbd> : Turn on Voiceover
+* <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>←</kbd> / <kbd>→</kbd> : Navigate items
+* <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Space</kbd> : Click the active item
+* <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>U</kbd> : Open the rotary menu
 
 ```notes
 - Scavenger hunt demo
-- Wikipedia?
+- New York Times
 ```
 
 ---
@@ -180,16 +208,16 @@ Advanced:
 <ul>
     <Appear>
         <li>
-        You should be able to understand all content on the page, including images, with your eyes closed.
+        You should be able to perceive all content on the page, including images, with your eyes closed.
         </li>
         <li>
-            Every form element should have an understandable label (and any relevant text such as captions and validation messages should be read out as well)
+        Every form element should have an understandable label (and any relevant validation messages should be read out as well)
         </li>
         <li>
-            Any notifications (pop-ups, errors, toasts) should speak out loud when they are triggered.
+        Any notifications (pop-ups, errors, toasts) should speak out loud when they are triggered.
         </li>
         <li>
-            BONUS POINTS: use control + option + U to bring up the rotary menu. Use the left/right arrows to go to find the list of Landmarks or Headings. These are used for navigating pages and should be a logical overview of the page content.
+        BONUS POINTS: Use the rotary menu to browse Landmarks or Headings. These should give a logical overview of the page content.
         </li>
         </Appear>
     </ul>
@@ -197,22 +225,22 @@ Advanced:
 ---
 ## Where are our POUR gaps?
 
-| Users 	    | Perceivable? 	| Understandable?| Operable? 	|
-|-----------	|-----------	|--------------- |-------------	|
+| Impairement   | Perceivable? 	| Understandable?| Operable? 	|
+|-------------- |-----------	|--------------- |-------------	|
 | Vision    	|           	|           	 |             	|
 | Hearing   	|           	|           	 |             	|
 | Mobility  	|           	|           	 |             	|
 | Cognitive 	|           	|           	 |             	|
 
 ```notes
-
-## What are my biases?
-Perceivable: by my eyes, blind, but not color blind or low vision non screen reader.
-
+Framework for catching mistakes:
+1. Think about the full range of user abilities and assistive technology different from your own.
+(For vision it's screen reader, magnifier, old age, color blind)
+Ask whether those people will be able to perceive, understand, and operate.
 Operable: Keyboards yep, pointers, taps? Are buttons big enough?
 
-Understandable: not necessarily… hard to write rules (and WCAG was criticized for this), so the easier the better: clear heading structure, reasonable text size, layout, stick to common design patterns.
- Bottom line: empathize with users  (especially cognitive disabilities) to drive good design: simplify, streamline, make intuitive.
+Understandable: Hard to write rules (and WCAG was criticized for this), so the easier the better: clear heading structure, reasonable text size, layout, stick to common design patterns.
+Bottom line: empathize with users  (especially cognitive disabilities) to drive good design: simplify, streamline, make intuitive.
 ```
 ---
 # Exercise: Full Accessibility Audit
@@ -220,27 +248,28 @@ Understandable: not necessarily… hard to write rules (and WCAG was criticized 
 ```notes
 Break into cross functional groups (if possible) and pick a website to audit, then compare findings.
 ```
-
 ---
 # How can I use this?
+
+<ul>
+    <Appear>
+    <li> Talk with the team and client about your full range of users and the impact of accessibility.</li>
+    <li>Practice keyboard + screen reader tests on your project or on your own time.</li>
+    <li> Quickly test before any new UI gets accepted as complete.</li>
+    <li> Test whenever a full flow is completed</li>
+    <li> Show off your tests during your demo!</li>
+</Appear>
+</ul>
 
 ```notes
 In your groups, brainstorm challenges and ideas of integrating this in your daily work.
 
-1. Practice it on your project or as you browse the web. 
-2. Quickly test before any new UI gets accepted as complete.
-3. Test whenever a full flow is completed
-4. Show off during your demo!
-
 ```
----
-```notes
-Final thoughts: we have responsibility as the leaders in our field to build the web infrastructure in an equitable way that makes it a better experience for everybody.
-it will make our clients products outprform competitors.
-```
-
 ---
 
 # Thanks for coming!
 
-* link to materials
+```notes
+Final thoughts: we have responsibility as the leaders in our field to build the web infrastructure in an equitable way that makes it a better experience for everybody.
+It will make our clients products outperform competitors.
+```
