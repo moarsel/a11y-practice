@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx && cp -R images dist/images && cp -R exercises dist/exercises",
+    "build": "cp -R images dist && cp -R exercises dist && mdx-deck build deck.mdx",
     "deploy": "npm run build && now ./dist -A ../now.json && now alias",
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
