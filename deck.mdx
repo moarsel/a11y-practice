@@ -40,6 +40,7 @@ The result was a worse experience for everyone. (Tyler in Japan)
 ```notes
 Curbs designed for all users are not only more inclusive, but better for everyone. 
 People on powered scooters now have the technology and available design to potentially have better than average ability to navigate an accessible city.
+Who else takes advantage of these curb cuts?
 A study showed that 9/10 pedestrians would go out of their way to use a curb cut.
 ```
 ---
@@ -56,7 +57,6 @@ As web developers we want to build an environment that a) minimizes barriers, b)
 ```notes
 The first time we built our roads (and schools, transit, etc.) we didn't account for all our users. 
 The web is the infrastructure of the future and we can avoid making that mistake again.
-Question: What capabilities does your current work give people, and how could barriers affect them?
 ```
 ---
 
@@ -65,6 +65,10 @@ Question: What capabilities does your current work give people, and how could ba
 
  -Tim Berners-Lee, W3C Director and inventor of the World Wide Web, 1997
 
+```notes
+Question: What capabilities does your current work give people, and how could barriers affect them?
+(Ask your client as well).
+```
 ---
 ### What impairments might our users have?
 
@@ -77,11 +81,12 @@ Question: What capabilities does your current work give people, and how could ba
 
 ```notes
 Exercise:
-Abilities come in a wide spectrum (think Stephen Hawking)
+Abilities (and impairment) come in a wide spectrum (think Stephen Hawking)
  - cognitive, vision, speech, hearing, mobility
  - temporary, permanent, situational
 
-Make 4 groups and think of the types of impairments for each category.
+Make 4 groups and think of the types of impairments for each category. 
+The point is to see that the spectrum of abilities is very fluid and includes everyone.
 ```
 ---
 
@@ -101,23 +106,19 @@ Switch Devices
 </iframe>
 
 ```notes
-Demo switch on mac if there is time.
+Demo of Accessibility settings on mac. Demo switch use if there is time.
 ```
 ---
 ## 🙀 Seems impossible?
 # Don't panic!
 ```notes
-Luckily the web was designed to make this easier, and you’ve already learned the 4 core principles of WCAG:
-*Perceivable*
-*Operable*
-*Understandable*
-*Robust*: across different assistive technology.
+The web was designed to be accessible from the start, and WCAG guidelines tell us how to avoid creating barriers for our users.
 ```
 ---
 <Image src='./images/interaction-model.png'/>
 
 ```notes
-What does it mean, practically for a user to not have any barriers to our web apps?
+What does it mean, practically, for a user to not have any barriers to our web apps?
 It's helpful to break it down:
 They can perceive it (see, hear, touch).
 They can understand it (content is simple, grouped into meaningful sections, what actions are available)
@@ -182,8 +183,8 @@ Brainstorm steps to put on a keyboard accessibility checklist:
 ---
 
 # Screen readers 🔊
-* used primarily by people with low vision
-* also helps search engines, web scrapers, and other non-visual agents
+* Used primarily by people with low vision or blindness
+* Also helps search engines, web scrapers, and other non-visual agents
 
 ```notes
 Demo: show where accessibility settings are, slow down rate, and then turn on.
@@ -192,9 +193,10 @@ Demo: show where accessibility settings are, slow down rate, and then turn on.
 ---
 
 # Voiceover Cheat sheet
-* <kbd>Command</kbd> + <kbd>F5</kbd> : Turn on Voiceover
+* <kbd>Command</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> : Turn on Voiceover
 * <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>←</kbd> / <kbd>→</kbd> : Navigate items
 * <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Space</kbd> : Click the active item
+* <kbd>Control</kbd> : Shut up voice
 * <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>U</kbd> : Open the rotary menu
 
 ```notes
@@ -225,7 +227,7 @@ Demo: show where accessibility settings are, slow down rate, and then turn on.
 ---
 ## Where are our POUR gaps?
 
-| Impairement   | Perceivable? 	| Understandable?| Operable? 	|
+| Impairment    | Perceivable? 	| Understandable?| Operable? 	|
 |-------------- |-----------	|--------------- |-------------	|
 | Vision    	|           	|           	 |             	|
 | Hearing   	|           	|           	 |             	|
@@ -254,16 +256,15 @@ Break into cross functional groups (if possible) and pick a website to audit, th
 <ul>
     <Appear>
     <li> Talk with the team and client about your full range of users and the impact of accessibility.</li>
-    <li>Practice keyboard + screen reader tests on your project or on your own time.</li>
+    <li> Practice keyboard + screen reader tests on your project or on your own time.</li>
     <li> Quickly test before any new UI gets accepted as complete.</li>
     <li> Test whenever a full flow is completed</li>
     <li> Show off your tests during your demo!</li>
-</Appear>
+    </Appear>
 </ul>
 
 ```notes
-In your groups, brainstorm challenges and ideas of integrating this in your daily work.
-
+In your groups, brainstorm 1) challenges and 2) ideas of integrating this in your daily work.
 ```
 ---
 

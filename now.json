@@ -1,8 +1,8 @@
 {
   "name": "accessibility-practice",
   "alias": "a11y-practice",
+  "public": true,
   "static": {
-    "public": "./dist",
     "cleanUrls": true,
     "directoryListing": false
   }
