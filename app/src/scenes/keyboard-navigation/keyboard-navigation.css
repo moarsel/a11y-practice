@@ -1,0 +1,15 @@
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  transition: top 1s ease-out;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  outline: 0;
+  transition: top 0.1s ease;
+}
