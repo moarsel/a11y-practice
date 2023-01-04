@@ -23,6 +23,6 @@
   "homepage": "https://github.com/moarsel/a11y-practice#readme",
   "dependencies": {},
   "devDependencies": {
-    "mdx-deck": "^1.6.9"
+    "mdx-deck": "^1.10.2"
   }
 }
